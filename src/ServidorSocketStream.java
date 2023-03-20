@@ -1,3 +1,4 @@
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -27,8 +28,11 @@ import java.net.ServerSocket;
                 InputStream is=newSocket.getInputStream();
                 OutputStream os=newSocket.getOutputStream();
 
+
+
                 byte[] mensaje=new byte[25];
                 is.read(mensaje);
+                System.out.println(mensaje);
 
                 System.out.println("Mensaje recibido: "+new String(mensaje));
 
